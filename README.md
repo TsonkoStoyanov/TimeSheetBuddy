@@ -1,4 +1,5 @@
 # TimeSheetBuddy
  
-admin@admin.com
-123456
+Username:admin@admin.com
+
+Password:123456
