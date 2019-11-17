@@ -1,0 +1,43 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using TimeSheetBuddy.Data.Models
+
+<ul class="navbar-nav">
+
+    @if (this.User.Identity.IsAuthenticated)
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark font-weight-bold">Hello, <span class="text-info">@User.Identity.Name</span></a>
+        </li>
+
+        if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+        {
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/Admin/Manager/Create">Create Manager</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/Admin/Employee/Create">Create Employee</a>
+            </li>
+        }
+        else if (this.User.IsInRole(GlobalConstants.ManagerRoleName))
+        {
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="">Management</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/Project/Create">Create Project</a>
+            </li>
+        }
+        else
+        {
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/Activity/Create">Activity</a>
+            </li>
+        }
+
+        <li class="nav-item">
+            <a class="nav-link text-dark" href="/Identity/Account/Logout"><span class="text-danger">Logout</span></a>
+        </li>
+    }
+
+</ul>

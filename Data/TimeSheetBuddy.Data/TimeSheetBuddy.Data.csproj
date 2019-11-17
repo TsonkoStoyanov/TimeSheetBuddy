@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20191117090903_initial1.cs" />
+    <Compile Remove="Migrations\20191117090903_initial1.Designer.cs" />
+    <Compile Remove="Migrations\20191117091107_initial.cs" />
+    <Compile Remove="Migrations\20191117091107_initial.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\TimeSheetBuddy.Common\TimeSheetBuddy.Common.csproj" />
+    <ProjectReference Include="..\TimeSheetBuddy.Data.Models\TimeSheetBuddy.Data.Models.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,170 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="container-fluid">
+
+    <div class="table">
+        <h4>Projects</h4>
+        <div class="row header">
+            <div class="cell">
+                Project Name
+            </div>
+            <div class="cell">
+                Description
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="cell" data-title="Project Name">
+                TaskManager
+            </div>
+            <div class="cell" data-title="Description">
+                This is software managment tool.
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="cell" data-title="Project Name">
+                HospitalMS
+            </div>
+            <div class="cell" data-title="Description">
+                Hospital managment system.
+            </div>
+
+        </div>
+    </div>
+    @if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+    {
+
+        <div class="table">
+            <h4>Managers</h4>
+            <div class="row header green">
+                <div class="cell">
+                    Full Name
+                </div>
+                <div class="cell">
+                    Email
+                </div>
+                <div class="cell">
+                    PhoneNumber
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="cell" data-title="FullName">
+                    Tsonko Stoyanov
+                </div>
+                <div class="cell" data-title="Email">
+                    manager@manager.com
+                </div>
+                <div class="cell" data-title="PhoneNumber">
+                    +359876543
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="cell" data-title="FullName">
+                    Ivan Ivanov
+                </div>
+                <div class="cell" data-title="Email">
+                    manager2@manager.com
+                </div>
+                <div class="cell" data-title="PhoneNumber">
+                    +359876543
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="table">
+            <h4>Activities</h4>
+            <div class="row header green">
+                <div class="cell">
+                    Date
+                </div>
+                <div class="cell">
+                    ActivityDesc
+                </div>
+                <div class="cell">
+                    Employee
+                </div>
+                <div class="cell">
+                    Time Worked
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="cell" data-title="Date">
+                    17.11.2019
+                </div>
+                <div class="cell" data-title="ActivityDesc">
+                    development
+                </div>
+                <div class="cell" data-title="Employee">
+                    Tsonko Stoyanov
+                </div>
+                <div class="cell" data-title="Employee">
+                    2
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="cell" data-title="Date">
+                    17.11.2019
+                </div>
+                <div class="cell" data-title="ActivityDesc">
+                    support
+                </div>
+                <div class="cell" data-title="Employee">
+                    Tsonko Stoyanov
+                </div>
+                <div class="cell" data-title="Employee">
+                    2
+                </div>
+            </div>
+        </div>
+    }
+    @if (this.User.IsInRole(GlobalConstants.AdministratorRoleName) || this.User.IsInRole(GlobalConstants.ManagerRoleName))
+    {
+
+        <div class="table">
+            <h4>Employees</h4>
+            <div class="row header blue">
+                <div class="cell">
+                    Full Name
+                </div>
+                <div class="cell">
+                    Email
+                </div>
+                <div class="cell">
+                    PhoneNumber
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="cell" data-title="FullName">
+                    Tanq Petrova
+                </div>
+                <div class="cell" data-title="Email">
+                    employee@employee.com
+                </div>
+                <div class="cell" data-title="PhoneNumber">
+                    +359876549
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="cell" data-title="FullName">
+                    Victor Petrov
+                </div>
+                <div class="cell" data-title="Email">
+                    employee2@employee.com
+                </div>
+                <div class="cell" data-title="PhoneNumber">
+                    +359876545
+                </div>
+            </div>
+        </div>
+    }
+</div>

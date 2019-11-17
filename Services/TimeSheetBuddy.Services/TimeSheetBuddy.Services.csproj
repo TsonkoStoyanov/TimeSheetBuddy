@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Data\TimeSheetBuddy.Data.Models\TimeSheetBuddy.Data.Models.csproj" />
+    <ProjectReference Include="..\..\Data\TimeSheetBuddy.Data\TimeSheetBuddy.Data.csproj" />
+    <ProjectReference Include="..\..\TimeSheetBuddy.Common\TimeSheetBuddy.Common.csproj" />
+    <ProjectReference Include="..\..\Web\TimeSheetBuddy.Web.InputModels\TimeSheetBuddy.Web.InputModels.csproj" />
+  </ItemGroup>
+
+</Project>
